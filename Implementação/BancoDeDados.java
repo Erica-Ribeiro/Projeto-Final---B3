@@ -27,7 +27,7 @@ private ResultSet resultset =null;
 			//System.err.println();
 		}
 	}
-	public boolean estaConectado() { //verificação se o banco 
+	public boolean estaConectado() { //verificação da conexão do banco 
 		if(this.conection!=null) {
 			return true;
 		}else {
