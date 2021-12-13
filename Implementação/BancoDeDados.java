@@ -10,13 +10,13 @@ private java.sql.Statement statement = null;
 private ResultSet resultset =null;
 //passagem de parametros p/ conectar o servidor
 	public void conectar() {
-		//CrianÁ„o das 4 vari·veis de controle
+		//Crian√ß√£o das 4 vari√°veis de controle
 		String servidor = "jdbc:mysql://localhost/b3";
 		String usuario = "root";
 		String senha = "mysql";
 		String driver = "com.mysql.cj.jdbc.Driver";
 		
-		//Chamando o processo para tratar a exceÁ„o no Banco de Dados
+		//Chamando o processo para tratar a exce√ß√£o no Banco de Dados
 		
 		try {
 			Class.forName(driver);
@@ -27,7 +27,7 @@ private ResultSet resultset =null;
 			//System.err.println();
 		}
 	}
-	public boolean estaConectado() {
+	public boolean estaConectado() { //verifica√ß√£o se o banco 
 		if(this.conection!=null) {
 			return true;
 		}else {
@@ -37,5 +37,5 @@ private ResultSet resultset =null;
 	}
 
 
-// a inclus„o dos metodo comeÁa a a partir daqui
+// a inclus√£o dos metodos come√ßa a a partir daqui
 }
