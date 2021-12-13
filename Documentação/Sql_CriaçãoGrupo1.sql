@@ -2,11 +2,11 @@ create database grupo1;
 use grupo1;
 CREATE TABLE `clientes` (
 	`idCliente` INT NOT NULL AUTO_INCREMENT,
-	`nomeCliente` varchar(50) NOT NULL AUTO_INCREMENT,
+	`nomeCliente` varchar(50) NOT NULL,
 	`cpfCliente` varchar(14) NOT NULL,
 	`telefoneCliente` varchar(14) NOT NULL,
 	`emailCliente` varchar(60) NOT NULL,
-	`contaCliente` INT(255) NOT NULL,
+	`contaCliente` INT NOT NULL,
 	PRIMARY KEY (`idCliente`)
 );
 
