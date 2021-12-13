@@ -1,17 +1,17 @@
 package funcaoCrud;
-// main (funÁ„o principal do crud)
-public class StartCrud {
+// main (fun√ß√£o principal do crud)
+public class StartCrud' {
 
 	public static void main(String[] args) {
         // objeto para instanciar:(chamar) o Banco de dados  
 		BancoDeDados carregaBanco = new BancoDeDados();
-    		carregaBanco.conectar(); // chamada do mÈtodo que verificaÁ„o da conex„o com o Banco
-    		if(carregaBanco.estaConectado()) { //laÁo que execulta a verificaÁ„o se esta conectado 
-    			//exibe (1) e chama as funÁıes de operÁ„o no banco, sena„o exibe (2) 
-    			carregaBanco.conectar();// chamada da conex„o com o banco
-    			System.out.println("Conex„o com o banco feita com Íxito"); //(1)
+    		carregaBanco.conectar(); // chamada do m√©todo que verifica√ß√£o da conex√£o com o Banco
+    		if(carregaBanco.estaConectado()) { //la√ßo que execulta a verifica√ß√£o se esta conectado 
+    			//exibe (1) e chama as fun√ß√µes de oper√ß√£o no banco, sena√£o exibe (2) 
+    			carregaBanco.conectar();// chamada da conex√£o com o banco
+    			System.out.println("Conex√£o com o banco feita com √™xito"); //(1)
     		}else {
-    			System.out.println("N„o foi possÌvel conectar ao Banco");//(2)      
+    			System.out.println("N√£o foi poss√≠vel conectar ao Banco");//(2)      
     			}
     		}
     		
