@@ -15,7 +15,7 @@ CREATE TABLE `contas` (
 	`ClienteTitular` varchar(50) NOT NULL,
 	`agenciaConta` INT NOT NULL,
 	`TipoConta` INT NOT NULL,
-	`saldoConta` FLOAT NOT NULL,
+	`saldoConta` DOUBLE NOT NULL,
 	PRIMARY KEY (`numConta`)
 );
 
