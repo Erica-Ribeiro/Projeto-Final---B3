@@ -1,6 +1,6 @@
 package funcaoCrud;
 // main (função principal do crud)
-public class StartCrud' {
+public class StartCrud {
 
 	public static void main(String[] args) {
         // objeto para instanciar:(chamar) o Banco de dados  
