@@ -6,18 +6,19 @@ CREATE TABLE `clientes` (
 	`cpfCliente` varchar(14) NOT NULL,
 	`telefoneCliente` varchar(14) NOT NULL,
 	`emailCliente` varchar(60) NOT NULL,
-	`clienteConta` INT NOT NULL,
+	`contaCliente` INT(255) NOT NULL,
 	PRIMARY KEY (`idCliente`)
 );
 
 CREATE TABLE `contas` (
 	`numConta` INT NOT NULL AUTO_INCREMENT,
+	`ClienteTitular` varchar(50) NOT NULL,
 	`agenciaConta` INT NOT NULL,
 	`TipoConta` INT NOT NULL,
-	`saldoConta` DOUBLE NOT NULL,
+	`saldoConta` FLOAT NOT NULL,
 	PRIMARY KEY (`numConta`)
 );
 
-ALTER TABLE `clientes` ADD CONSTRAINT `clientes_fk0` FOREIGN KEY (`clienteConta`) REFERENCES `contas`(`numConta`);
+ALTER TABLE `clientes` ADD CONSTRAINT `clientes_fk0` FOREIGN KEY (`contaCliente`) REFERENCES `contas`(`numConta`);
 
 
