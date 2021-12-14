@@ -1,4 +1,4 @@
-# Projeto-Final---GamaAcademy- Este Repositório pertece ao grupo - SOLUTIONTECH
+# Projeto-Final---GamaAcademy- Este Repositório pertence ao grupo - SOLUTIONTECH
  integrantes do Grupo:
  <li> Antonio Carlos <li> Camila Barjud<li> Erica Ribeiro <li> Felipe Requena 
 <br>-----------------------------------------------------------------------------------------------------------<br>
