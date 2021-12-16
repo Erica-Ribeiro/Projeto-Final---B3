@@ -1,0 +1,99 @@
+create database projetoFinalGamaAcademy;
+
+use projetoFinalGamaAcademy;
+
+CREATE TABLE clientes (
+	idCliente INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	nomeCliente VARCHAR(50) NOT NULL,
+	cpfCliente VARCHAR(14) NOT NULL UNIQUE,
+	celularCliente VARCHAR(15) NOT NULL,
+	emailCliente VARCHAR(60) NOT NULL
+) ENGINE = INNODB;
+
+CREATE TABLE contaCliente (
+	idCliente INT NOT NULL, 
+    idConta INT NOT NULL UNIQUE, 
+    PRIMARY KEY (idCliente, idConta),
+    CONSTRAINT FK_idCliente FOREIGN KEY (idCliente) REFERENCES clientes(idCliente),
+    CONSTRAINT FK_idConta FOREIGN KEY (idConta) REFERENCES contas(idConta)
+)ENGINE = INNODB;
+
+CREATE TABLE contas (
+	idConta INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+	titularConta VARCHAR(50) NOT NULL,
+	agenciaConta INT NOT NULL,
+    numeroConta VARCHAR(7) NOT NULL UNIQUE,
+	tipoConta INT NOT NULL,
+	saldoConta DOUBLE NOT NULL
+)ENGINE = INNODB;
+
+CREATE TABLE empresas (
+	idEmpresa INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    razaoSocial VARCHAR(50) NOT NULL UNIQUE,
+    nomeFantasia VARCHAR(50) NULL UNIQUE,
+    CNPJ VARCHAR(18) NOT NULL UNIQUE,
+    inscricaoEstatual VARCHAR(15) NULL UNIQUE,
+    telefoneEmpresa VARCHAR(14) NOT NULL UNIQUE,
+    celularEmpresa VARCHAR(15) NULL UNIQUE,
+    emailEmpresa VARCHAR(60) NOT NULL UNIQUE,
+    idEndereco INT NOT NULL,
+    CONSTRAINT FK_idEndereco FOREIGN KEY (idEndereco) REFERENCES enderecoEmpresa(idEndereco)
+)ENGINE = INNODB;
+
+CREATE TABLE enderecoEmpresa (
+	idEndereco INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    endereco VARCHAR(100) NOT NULL,
+    numero INT NOT NULL,
+    bairro VARCHAR(50) NOT NULL,
+    cidade VARCHAR(50) NOT NULL,
+    estado VARCHAR(50) NOT NULL
+)ENGINE = INNODB;
+
+CREATE TABLE contaEmpresa (
+	idEmpresa INT NOT NULL,
+    idConta INT NOT NULL UNIQUE, 
+    PRIMARY KEY (idEmpresa, idConta),
+    CONSTRAINT FK_idEmpresa FOREIGN KEY (idEmpresa) REFERENCES empresas(idEmpresa),
+    CONSTRAINT FK_idContaPJ FOREIGN KEY (idConta) REFERENCES contas(idConta)
+)ENGINE = INNODB;
+
+CREATE TABLE funcionario (
+codFuncionario INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nomeFuncionario VARCHAR(50) NOT NULL,
+cpfFuncionario VARCHAR(50) NOT NULL UNIQUE,
+emailFuncionario VARCHAR(100) NOT NULL UNIQUE,
+celularFuncionario VARCHAR(15) NOT NULL UNIQUE
+)ENGINE = INNODB;
+
+CREATE TABLE loginFuncionario (
+	codFuncionario INT NOT NULL UNIQUE,
+    senha	INT NOT NULL,
+    PRIMARY KEY (codFuncionario, senha),
+    CONSTRAINT FK_CodFuncionario FOREIGN KEY (codFuncionario) REFERENCES funcionario(codFuncionario)
+)ENGINE = INNODB;
+
+CREATE TABLE loginCliente (
+	idCliente INT NOT NULL,
+    senha	INT NOT NULL,
+    PRIMARY KEY (idCliente, senha),
+    CONSTRAINT FK_IdClienteLogin FOREIGN KEY (idCliente) REFERENCES clientes(idCliente)
+)ENGINE = INNODB;
+
+CREATE TABLE extrato (
+	idExtrato INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    dataTransacao VARCHAR(10) NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    descricao VARCHAR(50) NOT NULL,
+    valor DOUBLE NOT NULL,
+    saldoData DOUBLE NOT NULL,
+    idCliente INT NOT NULL,
+    CONSTRAINT FK_IdClienteExtrato FOREIGN KEY (idCliente) REFERENCES clientes(idCliente)
+)ENGINE = INNODB;
+
+CREATE TABLE chavePixCliente (
+	idChavePix INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    tipoChavePix VARCHAR(50) NOT NULL,
+    chavePix VARCHAR(50) NOT NULL UNIQUE,
+    cpfCliente VARCHAR(14),
+    CONSTRAINT FK_CPFClienteChavePix FOREIGN KEY (cpfCliente) REFERENCES clientes(cpfCliente)
+)ENGINE = INNODB;
