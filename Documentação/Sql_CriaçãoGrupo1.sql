@@ -1,3 +1,5 @@
+/*este script contém um erro de chave estrangeira, permitindo que a tabela contas seja criadas antes da tabela clientes
+a correção deste erro e feita no arquivo sql_SolutionTech*/
 create database grupo1;
 use grupo1;
 CREATE TABLE `clientes` (
