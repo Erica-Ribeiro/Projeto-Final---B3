@@ -5,4 +5,5 @@
  a estrutura do repositório contem:
  <br> Documentação: contem a toda a documentação do projeto (Inclusive um ppt) com detalhes do projeto <br> 
  implementação: contem os codigos java da aplicação <br>
+  Na Pasta SpringBoot ela contem a API feita com o SpringBoot. A pasta html contem os codigos desevolvidos em html. A pasta projeto com a instrutura da API em springBoot
  
