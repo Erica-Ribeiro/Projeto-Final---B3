@@ -6,4 +6,16 @@
  <br> Documentação: contem a toda a documentação do projeto (Inclusive um ppt) com detalhes do projeto <br> 
  implementação: contem os codigos java da aplicação <br>
   Na Pasta SpringBoot ela contem a API feita com o SpringBoot. A pasta html contem os codigos desevolvidos em html. A pasta projeto com a instrutura da API em springBoot
- 
+ na pasta Projeto-Final---GamaAcademyestá a API em java na docummentação o SolutionTech_java e o MER da API em java
+ <br>--------------------------------------------------------------------------------------------------------------<br>
+ Imagens Do Projeto
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/tela1.jpeg?raw=true
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/tela2.jpeg
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/tela3.jpeg
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/tela4.jpeg
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/tela5.jpeg
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/tela6.jpeg
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/AtualizarClientes.jpeg
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/deletarClientes.jpeg
+https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/cadastro%20de%20clientes.jpeg
+ https://github.com/Erica-Ribeiro/Projeto-Final---GamaAcademy/blob/main/Imagens/ver%20extrato.jpeg
